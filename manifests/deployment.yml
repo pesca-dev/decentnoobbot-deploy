@@ -5,8 +5,14 @@ metadata:
   namespace: decentnoobbot
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: decentnoobbot-deployment
   strategy: {}
   template:
+    metadata:
+      labels:
+        io.kompose.service: decentnoobbot-deployment
     spec:
       containers:
         - image: ghcr.io/pesca-dev/decentnoobbot:f9f240649f38ad799e702e8a3bf35a690912ca81
