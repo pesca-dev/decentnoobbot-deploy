@@ -19,6 +19,8 @@ spec:
           imagePullPolicy: Always
           name: decentnoobbot-deployment
           env:
+          - name: RUST_LOG
+            value: debug
           - name: BOT_TOKEN
             valueFrom:
               secretKeyRef:
