@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: decentnoobbot-deployment
+  namespace: decentnoobbot
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    spec:
+      containers:
+        - image: ghcr.io/pesca-dev/decentnoobbot:61fd13f2737e09a7c24bc36ea09163e42ccb466c
+          imagePullPolicy: Always
+          name: decentnoobbot-deployment
+          env:
+          - name: SURREAL_USER
+            valueFrom:
+              secretKeyRef:
+                name: decentnoobbot-secret
+                key: bot-token
+          resources: {}
+      restartPolicy: Always
+status: {}
