@@ -13,7 +13,7 @@ spec:
           imagePullPolicy: Always
           name: decentnoobbot-deployment
           env:
-          - name: SURREAL_USER
+          - name: BOT_TOKEN
             valueFrom:
               secretKeyRef:
                 name: decentnoobbot-secret
