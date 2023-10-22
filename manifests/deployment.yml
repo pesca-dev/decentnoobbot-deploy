@@ -9,7 +9,7 @@ spec:
   template:
     spec:
       containers:
-        - image: ghcr.io/pesca-dev/decentnoobbot:61fd13f2737e09a7c24bc36ea09163e42ccb466c
+        - image: ghcr.io/pesca-dev/decentnoobbot:f9f240649f38ad799e702e8a3bf35a690912ca81
           imagePullPolicy: Always
           name: decentnoobbot-deployment
           env:
