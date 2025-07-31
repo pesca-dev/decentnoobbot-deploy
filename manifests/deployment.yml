@@ -15,7 +15,7 @@ spec:
         io.kompose.service: decentnoobbot-deployment
     spec:
       containers:
-        - image: ghcr.io/pesca-dev/decentnoobbot:cea3b61fce60e85b87b149f733c7adfc171945a9
+        - image: ghcr.io/pesca-dev/decentnoobbot:d0cf0f43ec74d74bf133f356b76448d78179e602
           imagePullPolicy: Always
           name: decentnoobbot-deployment
           env:
